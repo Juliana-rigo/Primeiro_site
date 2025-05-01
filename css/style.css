@@ -1,0 +1,84 @@
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 15px auto;
+}
+
+.icon-social {
+    height: 40px;
+    width: 40px;
+    display: block;
+    background-size: contain;
+    margin: 5px 15px;
+}
+
+.icon-social.facebook {
+    background-image: url("../imagens/facebook.jpg");
+}
+
+.icon-social.instagram {
+    background-image: url("../imagens/instagram.png");
+}
+
+.icon-social.youtube {
+    background-image: url("../imagens/youtube.png");
+}
+
+.affix {
+    top: 0;
+    width: 100%;
+    z-index: 20;
+}
+
+h4 {
+    text-align: center;
+
+}
+
+IMG.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    height: 250px;
+}
+
+h2.titulo {
+    text-align: center;
+
+}
+
+IMG.decoracoes {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    height: 350px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 15px auto;
+}
+
+
+
+img.logofooter {
+    height: 60px;
+    width: 70px;
+    display: block;
+    background-size: contain;
+    margin: 5px 15px;
+}
+
+img.cursos {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: 400px;
+
+}
