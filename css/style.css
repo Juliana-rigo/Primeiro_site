@@ -82,3 +82,11 @@ img.cursos {
     height: 400px;
 
 }
+
+#formCad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+}
