@@ -91,13 +91,14 @@ body {
 
 /* Estilo para o container principal */
 .container.marketing {
-    padding-top: 100px;
+    padding-top: 50px;
+    /* Diminuindo o espaçamento */
     padding-bottom: 50px;
     max-width: 1140px;
     margin: 0 auto;
 }
 
-/* Rodapé com ícones sociais - nova versão */
+/* Rodapé com ícones sociais */
 .footer-links {
     text-align: center;
     margin-top: 30px;
@@ -274,4 +275,10 @@ footer {
 .featurette-divider {
     margin: 60px 0;
     border-top: 2px solid #eee;
+}
+
+/* Ajuste no espaço entre o carrossel e o conteúdo */
+.carousel {
+    margin-bottom: -90px;
+    /* Ajustando a margem inferior do carrossel */
 }
