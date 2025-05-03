@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-"# PrimeiroProjeto" 
-=======
-"# PrimeiroProjeto" 
->>>>>>> 9442566 (Inicializando o repositório)
+Projeto Academico da disciplina de Front-End.
