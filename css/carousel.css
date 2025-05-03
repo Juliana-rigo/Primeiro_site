@@ -20,13 +20,6 @@ body {
   z-index: 20;
 }
 
-.navbar-right {
-  float: right;
-  margin-right: 15px;
-}
-.navbar-right li {
-  margin-left: 10px;
-}
 
 /* Flip around the padding for proper display in narrow viewports */
 .navbar-wrapper > .container {
