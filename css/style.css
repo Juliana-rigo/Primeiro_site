@@ -1,37 +1,50 @@
-/* Estilização básica do corpo */
+/* ===============================
+   Variáveis globais (cores, fontes)
+   =============================== */
+:root {
+    --cor-primaria: #ff99aa;
+    --cor-hover: #ffccff;
+    --cor-fundo-footer: #f5f5f5;
+    --cor-titulo: #a94442;
+    --cor-texto: #2c2c2c;
+    --cor-subtitulo: #4a4a4a;
+    --cor-destaque: #d6336c;
+}
+
+/* ===============================
+   Base
+   =============================== */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.7;
     background-color: #fff;
-    color: #2c2c2c;
+    color: var(--cor-texto);
     margin: 0;
     padding: 0;
     font-size: 17px;
 }
 
-/* Corrige o carrossel para começar do topo */
-.carousel,
-.carousel-inner,
-.carousel .item,
-.carousel-inner .item>img {
-    margin-top: 0;
-    padding-top: 0;
+html {
+    scroll-behavior: smooth;
 }
 
-/* Carrossel responsivo */
-.carousel-inner>.item>img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+/* ===============================
+   Containers
+   =============================== */
+.container.marketing {
+    padding-top: 60px;
+    padding-bottom: 50px;
+    max-width: 1140px;
+    margin: 0 auto;
 }
 
-/* Botões do carrossel */
-.carousel-caption .btn {
-    padding: 10px 20px;
-    font-size: 18px;
+.index-page .container.marketing {
+    padding-top: 150px;
 }
 
-/* Navbar fixa no topo */
+/* ===============================
+   Navbar
+   =============================== */
 .navbar-wrapper {
     position: fixed;
     top: 0;
@@ -40,7 +53,6 @@ body {
     z-index: 1000;
 }
 
-/* Estilização da própria navbar */
 .navbar {
     margin: 0;
     border: none;
@@ -49,7 +61,6 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* Links do menu */
 .navbar-inverse .navbar-nav>li>a {
     color: #fff !important;
     padding: 14px 20px;
@@ -58,26 +69,52 @@ body {
 }
 
 .navbar-inverse .navbar-nav>li>a:hover {
-    color: #ffccff !important;
+    color: var(--cor-hover) !important;
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Link ativo da navbar */
 .navbar-inverse .navbar-nav>li.active>a,
 .navbar-inverse .navbar-nav>li.active>a:focus,
 .navbar-inverse .navbar-nav>li.active>a:hover {
-    background-color: #ff99aa !important;
+    background-color: var(--cor-primaria) !important;
     color: #fff !important;
 }
 
-/* Corrigir sobreposição de links */
 .navbar-nav {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
 }
 
-/* Botões padrão */
+/* ===============================
+   Carrossel
+   =============================== */
+.carousel,
+.carousel-inner,
+.carousel .item,
+.carousel-inner .item>img {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.carousel {
+    margin-bottom: -90px;
+}
+
+.carousel-inner>.item>img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.carousel-caption .btn {
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+/* ===============================
+   Botões
+   =============================== */
 .btn-default {
     background-color: #f8f8f8;
     border-color: #ddd;
@@ -89,78 +126,14 @@ body {
     border-color: #bbb;
 }
 
-/* Estilo para o container principal */
-.container.marketing {
-    padding-top: 50px;
-    /* Diminuindo o espaçamento */
-    padding-bottom: 50px;
-    max-width: 1140px;
-    margin: 0 auto;
-}
-
-/* Rodapé com ícones sociais */
-.footer-links {
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 10px;
-}
-
-.footer-links a {
-    display: inline-block;
-    width: 48px;
-    height: 48px;
-    margin: 0 8px;
-    border-radius: 50%;
-    background-color: #ffc0cb;
-    text-align: center;
-    line-height: 48px;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.footer-links a img {
-    width: 24px;
-    height: 24px;
-    vertical-align: middle;
-}
-
-.footer-links a:hover {
-    background-color: #ff99aa;
-    transform: scale(1.1);
-}
-
-/* Texto de copyright */
-.footer-copy {
-    text-align: center;
-    margin-top: 10px;
-    font-size: 14px;
-    color: #666;
-}
-
-/* Responsividade para seções adicionais */
-@media (max-width: 768px) {
-    .carousel-caption h1 {
-        font-size: 24px;
-    }
-
-    .carousel-caption p {
-        font-size: 16px;
-    }
-
-    .btn-lg {
-        font-size: 16px;
-        padding: 8px 16px;
-    }
-
-    .navbar-nav {
-        flex-direction: column;
-    }
-}
-
+/* ===============================
+   Galeria
+   =============================== */
 .titulo {
     text-align: center;
     font-size: 26px;
     margin-bottom: 24px;
-    color: #a94442;
+    color: var(--cor-titulo);
     font-weight: bold;
 }
 
@@ -198,22 +171,9 @@ body {
     font-weight: 600;
 }
 
-footer {
-    background-color: #f5f5f5;
-    padding: 20px 0;
-    margin-top: 40px;
-}
-
-.logofooter {
-    width: 32px;
-    margin: 0 10px;
-    transition: transform 0.3s;
-}
-
-.logofooter:hover {
-    transform: scale(1.2);
-}
-
+/* ===============================
+   Imagens
+   =============================== */
 .img-thumbnail {
     border-radius: 12px;
     transition: transform 0.3s ease;
@@ -229,7 +189,74 @@ footer {
     margin-bottom: 30px;
 }
 
-/* Estilos específicos para a seção de notícias */
+/* ===============================
+   Rodapé
+   =============================== */
+footer {
+    background-color: var(--cor-fundo-footer);
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+.footer-links {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    display: inline-block;
+    width: 60px;
+    /* Aumentado para 60px */
+    height: 60px;
+    /* Aumentado para 60px */
+    margin: 0 8px;
+    border-radius: 50%;
+    background-color: #ffc0cb;
+    text-align: center;
+    line-height: 60px;
+    /* Alinha o ícone no centro do círculo */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.footer-links a img {
+    width: 32px;
+    /* Aumentado para 32px */
+    height: 32px;
+    /* Aumentado para 32px */
+    vertical-align: middle;
+}
+
+.footer-links a:hover {
+    background-color: var(--cor-primaria);
+    transform: scale(1.2);
+}
+
+.footer-links a img:hover {
+    transform: scale(1.2);
+    /* Aumenta o ícone quando passa o mouse */
+}
+
+.footer-copy {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.logofooter {
+    width: 32px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+.logofooter:hover {
+    transform: scale(1.2);
+}
+
+/* ===============================
+   Notícias
+   =============================== */
 .featurette {
     margin-top: 80px;
     padding: 40px 25px;
@@ -243,7 +270,7 @@ footer {
 
 .featurette h2 {
     font-size: 32px;
-    color: #d6336c;
+    color: var(--cor-destaque);
     margin-bottom: 20px;
     text-align: center;
     font-weight: bold;
@@ -251,7 +278,7 @@ footer {
 
 .featurette h4 {
     font-size: 20px;
-    color: #4a4a4a;
+    color: var(--cor-subtitulo);
     margin-top: 20px;
     text-align: left;
     font-weight: 600;
@@ -277,8 +304,57 @@ footer {
     border-top: 2px solid #eee;
 }
 
-/* Ajuste no espaço entre o carrossel e o conteúdo */
-.carousel {
-    margin-bottom: -90px;
-    /* Ajustando a margem inferior do carrossel */
+/* ===============================
+   Responsividade
+   =============================== */
+@media (max-width: 768px) {
+    .carousel-caption h1 {
+        font-size: 24px;
+    }
+
+    .carousel-caption p {
+        font-size: 16px;
+    }
+
+    .btn-lg {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 576px) {
+    .galeria-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+
+/* Garantir que todas as imagens fiquem do mesmo tamanho e alinhadas */
+.img-fluid {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 250px;
+}
+
+/* Certifique-se de que as colunas estão organizadas adequadamente */
+.row.featurette .col-md-3 {
+    padding: 5px;
+}
+
+/* Ajustes na galeria de imagens */
+.row.featurette img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.row.featurette img:hover {
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }

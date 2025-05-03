@@ -11,7 +11,6 @@ body {
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
 
-/* Special class on .container surrounding .navbar, used for positioning it into place. */
 .navbar-wrapper {
   position: absolute;
   top: 0;
@@ -20,16 +19,16 @@ body {
   z-index: 20;
 }
 
-
-/* Flip around the padding for proper display in narrow viewports */
-.navbar-wrapper > .container {
+.navbar-wrapper>.container {
   padding-right: 0;
   padding-left: 0;
 }
+
 .navbar-wrapper .navbar {
   padding-right: 15px;
   padding-left: 15px;
 }
+
 .navbar-wrapper .navbar .container {
   width: auto;
 }
@@ -38,54 +37,96 @@ body {
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
-/* Carousel base class */
 .carousel {
   height: 500px;
   margin-bottom: 60px;
 }
-.carousel-caption {
-  z-index: 10; /* Since positioning the image, we need to help out the caption */
+
+.carousel-inner {
+  height: 100%;
 }
 
-/* Declare heights because of positioning of img element */
 .carousel .item {
   height: 500px;
-  background-color: #777;
+  background-color: #000;
+  transition: transform 0.5s ease-in-out;
 }
-.carousel-inner > .item > img {
+
+.carousel-inner>.item>img {
   position: absolute;
   top: 0;
   left: 0;
   min-width: 100%;
   height: 500px;
+  object-fit: cover;
+}
+
+/* CAPTION FAIXA */
+
+.carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* faixa escura semi-transparente */
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+
+.carousel-caption h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.carousel-caption p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.carousel-caption .btn {
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+
+/* CONTROLES DO CAROUSEL */
+
+.carousel-control.left,
+.carousel-control.right {
+  background-image: none;
+  color: #fff;
+  font-size: 30px;
 }
 
 
 /* MARKETING CONTENT
 -------------------------------------------------- */
 
-/* Center align the text within the three columns below the carousel */
 .marketing .col-lg-4 {
   margin-bottom: 20px;
   text-align: center;
 }
+
 .marketing h2 {
   font-weight: 400;
 }
+
 .marketing .col-lg-4 p {
   margin-right: 10px;
   margin-left: 10px;
 }
 
 
-/* Featurettes
-------------------------- */
+/* Featurettes */
 
 .featurette-divider {
-  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+  margin: 80px 0;
 }
 
-/* Thin out the marketing headings */
 .featurette-heading {
   font-weight: 300;
   line-height: 1;
@@ -94,10 +135,9 @@ body {
 
 .featurette-head {
   text-align: center;
-  line-height: 1;  
+  line-height: 1;
   font-weight: 200;
   font-style: italic;
-  
 }
 
 
@@ -105,24 +145,27 @@ body {
 -------------------------------------------------- */
 
 @media (min-width: 768px) {
-  /* Navbar positioning foo */
   .navbar-wrapper {
     margin-top: 20px;
   }
+
   .navbar-wrapper .container {
     padding-right: 15px;
     padding-left: 15px;
   }
+
   .navbar-wrapper .navbar {
     padding-right: 0;
     padding-left: 0;
-    border-radius: 4px; /* The navbar becomes detached from the top, so we round the corners */
+    border-radius: 4px;
   }
 
-  /* Bump up size of carousel content */
+  .carousel-caption h1 {
+    font-size: 40px;
+  }
+
   .carousel-caption p {
-    margin-bottom: 20px;
-    font-size: 21px;
+    font-size: 20px;
     line-height: 1.4;
   }
 
@@ -135,22 +178,13 @@ body {
   .featurette-heading {
     margin-top: 50px;
   }
- 
+
   @media (min-width: 990px) {
-    
-  .table {
-    text-align: center;
-    border-radius: 8px;
-    padding-right: 50px;
-    padding-left: 50px;
-    
+    .table {
+      text-align: center;
+      border-radius: 8px;
+      padding-right: 50px;
+      padding-left: 50px;
+    }
   }
-
-    
-     
-    
-
-  
-}
-
 }
