@@ -1,92 +1,277 @@
-.footer-links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 15px auto;
+/* Estilização básica do corpo */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
+    background-color: #fff;
+    color: #2c2c2c;
+    margin: 0;
+    padding: 0;
+    font-size: 17px;
 }
 
-.icon-social {
-    height: 40px;
-    width: 40px;
-    display: block;
-    background-size: contain;
-    margin: 5px 15px;
+/* Corrige o carrossel para começar do topo */
+.carousel,
+.carousel-inner,
+.carousel .item,
+.carousel-inner .item>img {
+    margin-top: 0;
+    padding-top: 0;
 }
 
-.icon-social.facebook {
-    background-image: url("../imagens/facebook.jpg");
-}
-
-.icon-social.instagram {
-    background-image: url("../imagens/instagram.png");
-}
-
-.icon-social.youtube {
-    background-image: url("../imagens/youtube.png");
-}
-
-.affix {
-    top: 0;
+/* Carrossel responsivo */
+.carousel-inner>.item>img {
     width: 100%;
-    z-index: 20;
+    height: auto;
+    object-fit: cover;
 }
 
-h4 {
-    text-align: center;
-
+/* Botões do carrossel */
+.carousel-caption .btn {
+    padding: 10px 20px;
+    font-size: 18px;
 }
 
-IMG.displayed {
+/* Navbar fixa no topo */
+.navbar-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Estilização da própria navbar */
+.navbar {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Links do menu */
+.navbar-inverse .navbar-nav>li>a {
+    color: #fff !important;
+    padding: 14px 20px;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 250px;
-    height: 250px;
+    white-space: nowrap;
 }
 
-h2.titulo {
-    text-align: center;
-
+.navbar-inverse .navbar-nav>li>a:hover {
+    color: #ffccff !important;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
-IMG.decoracoes {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 600px;
-    height: 350px;
+/* Link ativo da navbar */
+.navbar-inverse .navbar-nav>li.active>a,
+.navbar-inverse .navbar-nav>li.active>a:focus,
+.navbar-inverse .navbar-nav>li.active>a:hover {
+    background-color: #ff99aa !important;
+    color: #fff !important;
 }
 
-.footer-links {
+/* Corrigir sobreposição de links */
+.navbar-nav {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    margin: 15px auto;
+    gap: 5px;
 }
 
-
-
-img.logofooter {
-    height: 60px;
-    width: 70px;
-    display: block;
-    background-size: contain;
-    margin: 5px 15px;
+/* Botões padrão */
+.btn-default {
+    background-color: #f8f8f8;
+    border-color: #ddd;
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
-img.cursos {
-    display: block;
+.btn-default:hover {
+    background-color: #e0e0e0;
+    border-color: #bbb;
+}
+
+/* Estilo para o container principal */
+.container.marketing {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/* Rodapé com ícones sociais - nova versão */
+.footer-links {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    margin: 0 8px;
+    border-radius: 50%;
+    background-color: #ffc0cb;
+    text-align: center;
+    line-height: 48px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.footer-links a img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+.footer-links a:hover {
+    background-color: #ff99aa;
+    transform: scale(1.1);
+}
+
+/* Texto de copyright */
+.footer-copy {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Responsividade para seções adicionais */
+@media (max-width: 768px) {
+    .carousel-caption h1 {
+        font-size: 24px;
+    }
+
+    .carousel-caption p {
+        font-size: 16px;
+    }
+
+    .btn-lg {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+    }
+}
+
+.titulo {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 24px;
+    color: #a94442;
+    font-weight: bold;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.galeria-item {
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.galeria-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.galeria-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.galeria-item h4 {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+footer {
+    background-color: #f5f5f5;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+.logofooter {
+    width: 32px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+.logofooter:hover {
+    transform: scale(1.2);
+}
+
+.img-thumbnail {
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    max-height: 250px;
+    object-fit: cover;
+}
+
+.img-thumbnail:hover {
+    transform: scale(1.05);
+}
+
+.mb-4 {
+    margin-bottom: 30px;
+}
+
+/* Estilos específicos para a seção de notícias */
+.featurette {
+    margin-top: 80px;
+    padding: 40px 25px;
+    background-color: #fff5f8;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    width: 500px;
-    height: 400px;
-
 }
 
-#formCad {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 20%;
-    margin: auto;
+.featurette h2 {
+    font-size: 32px;
+    color: #d6336c;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.featurette h4 {
+    font-size: 20px;
+    color: #4a4a4a;
+    margin-top: 20px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.featurette p {
+    font-size: 17px;
+    color: #3a3a3a;
+    line-height: 1.75;
+    text-align: justify;
+}
+
+.featurette img {
+    border-radius: 12px;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    max-width: 100%;
+    height: auto;
+}
+
+.featurette-divider {
+    margin: 60px 0;
+    border-top: 2px solid #eee;
 }
