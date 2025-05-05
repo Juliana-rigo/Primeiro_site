@@ -61,6 +61,19 @@ body {
   object-fit: cover;
 }
 
+.carousel-indicators {
+  bottom: 10px;
+  /* Aumente esse valor para descer mais */
+}
+
+@media (min-width: 768px) {
+  .carousel-indicators {
+    bottom: -5px;
+    /* Em telas maiores, pode descer ainda mais */
+  }
+}
+
+
 /* CAPTION FAIXA */
 
 .carousel-caption {

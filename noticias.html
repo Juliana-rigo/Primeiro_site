@@ -17,21 +17,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <!-- Animate.css e WOW.js para animações -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <script>
-      new WOW().init();
-    </script>
   </head>
 
-  <body>
+  <body class="sem-zoom">
+    <!-- Navbar -->
     <div class="navbar-wrapper">
       <div class="container">
-        <nav class="navbar navbar-inverse navbar-static-top">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
           <div class="container">
             <div class="navbar-header">
               <button
@@ -98,10 +90,9 @@
         </nav>
       </div>
     </div>
-    <!-- Carousel
-        ================================================== -->
+
+    <!-- Carousel -->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -163,7 +154,7 @@
             <div class="carousel-caption">
               <h1>Decorações para festas</h1>
               <p>
-                Somos especialistas em decorações de festas de aniverário,
+                Somos especialistas em decorações de festas de aniversário,
                 casamento e demais ocasiões.
               </p>
               <p>
@@ -206,63 +197,76 @@
     </div>
     <!-- /.carousel -->
 
-    <!-- NOTÍCIAS  -->
-    <div id="noticias" class="row featurette wow fadeInUp">
-      <div class="col-md-7">
-        <h2 class="featurette-heading text-center">Últimas Notícias!</h2>
-        <p class="lead text-justify">
-          Curiosidades sobre as festas de aniversário dos famosos:<br /><br />
-
-          <strong>Madonna</strong><br />
-          Em seu aniversário de 56 anos, realizou uma festa à fantasia em Cannes
-          inspirada nos anos 20. A comemoração foi tão ousada que algumas fotos
-          foram removidas do Instagram por nudez.<br /><br />
-
-          <strong>Ivete Sangalo</strong><br />
-          Ganhou uma festa surpresa aos 40 anos em Salvador, com celebridades
-          como Fernanda Souza e Sabrina Sato.<br /><br />
-
-          <strong>Selena Gomez</strong><br />
-          Comemorou seus 21 anos em Malibu, em uma mansão temática de ciganos
-          com muitos convidados famosos.<br /><br />
-
-          <strong>Thiaguinho</strong><br />
-          Fez uma animada festa à fantasia em São Paulo, repleta de artistas,
-          para celebrar seus 30 anos.<br /><br />
-
-          <strong>Bruna Marquezine</strong><br />
-          Usou uma cobertura em Ipanema, no Rio de Janeiro, para comemorar seus
-          19 anos com estilo.<br /><br />
-
-          <strong>Preta Gil</strong><br />
-          Sua festa de 40 anos aconteceu no Baile da Favorita, na Favela da
-          Rocinha, com cerca de 800 convidados.
-        </p>
+    <!-- Content Section -->
+    <div class="container marketing">
+      <div id="noticias" class="row featurette">
+        <div class="col-md-7">
+          <h3 class="featurette-head">Últimas Notícias!</h3>
+          <br />
+          <p class="lead">
+            Ultimas festas dos famosos para se inspirar:<br /><br />
+            <strong>Madonna</strong><br />
+            Em seu aniversário de 56 anos, realizou uma festa à fantasia em
+            Cannes inspirada nos anos 20. A comemoração foi tão ousada que
+            algumas fotos foram removidas do Instagram por nudez.<br /><br />
+            <strong>Ivete Sangalo</strong><br />
+            Ganhou uma festa surpresa aos 40 anos em Salvador, com celebridades
+            como Fernanda Souza e Sabrina Sato.<br /><br />
+            <strong>Selena Gomez</strong><br />
+            Comemorou seus 21 anos em Malibu, em uma mansão temática de ciganos
+            com muitos convidados famosos.<br /><br />
+            <strong>Thiaguinho</strong><br />
+            Fez uma animada festa à fantasia em São Paulo, repleta de artistas,
+            para celebrar seus 30 anos.<br /><br />
+            <strong>Bruna Marquezine</strong><br />
+            Usou uma cobertura em Ipanema, no Rio de Janeiro, para comemorar
+            seus 19 anos com estilo.<br /><br />
+            <strong>Preta Gil</strong><br />
+            Sua festa de 40 anos aconteceu no Baile da Favorita, na Favela da
+            Rocinha, com cerca de 800 convidados.
+          </p>
+        </div>
+        <div class="col-md-5">
+          <div class="news-images">
+            <img
+              src="imagens/noticias1.jpg"
+              class="featurette-image img-responsive center-block"
+              alt="Famosos"
+              style="margin-bottom: 20px"
+            />
+            <img
+              src="imagens/noticias2.jpg"
+              class="featurette-image img-responsive center-block"
+              alt="Madonna"
+              style="margin-bottom: 20px"
+            />
+            <img
+              src="imagens/noticias3.jpg"
+              class="featurette-image img-responsive center-block"
+              alt="Lady Gaga"
+              style="margin-bottom: 20px"
+            />
+            <img
+              src="imagens/noticias4.jpg"
+              class="featurette-image img-responsive center-block"
+              alt="Selena"
+              style="margin-bottom: 20px"
+            />
+          </div>
+        </div>
       </div>
-      <div class="col-md-5">
-        <img
-          src="imagens/noticias1.jpg"
-          class="img-responsive center-block"
-          alt="Famosos"
-        />
-        <img
-          src="imagens/noticias2.jpg"
-          class="img-responsive center-block"
-          alt="Madonna"
-        />
-      </div>
+
+      <hr class="featurette-divider" />
     </div>
+    <!-- /.container -->
 
-    <hr class="featurette-divider" />
-
-    <!-- FOOTER ATUALIZADO -->
+    <!-- Footer -->
     <footer>
       <div class="footer-links">
         <a
           href="https://www.youtube.com/"
           target="_blank"
           data-toggle="tooltip"
-          data-placement="top"
           title="Assista"
         >
           <img class="logofooter" src="imagens/youtube.png" />
@@ -271,7 +275,6 @@
           href="http://instagram.com/"
           target="_blank"
           data-toggle="tooltip"
-          data-placement="top"
           title="Compartilhe"
         >
           <img class="logofooter" src="imagens/instagram.png" />
@@ -280,7 +283,6 @@
           href="https://www.facebook.com/"
           target="_blank"
           data-toggle="tooltip"
-          data-placement="top"
           title="Compartilhe"
         >
           <img class="logofooter" src="imagens/facebook.png" />
@@ -289,7 +291,6 @@
           href="https://www.twitter.com/"
           target="_blank"
           data-toggle="tooltip"
-          data-placement="top"
           title="Comente"
         >
           <img class="logofooter" src="imagens/twitter.png" />
@@ -302,16 +303,5 @@
     <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="./js/bootstrap.min.js"></script>
     <script type="text/javascript" src="./js/script.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-1.12.4.min.js"
-      crossorigin="anonymous"
-    ></script>
-    <script>
-      window.jQuery ||
-        document.write(
-          '<script src="../../assets/js/vendor/jquery.min.js"><\/script>'
-        );
-    </script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
   </body>
 </html>
